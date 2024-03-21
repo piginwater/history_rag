@@ -1,0 +1,8 @@
+.DS_Store
+.venv
+/flagged
+/work/*
+.vscode
+.ipynb_checkpoints/
+__pycache__/
+db/

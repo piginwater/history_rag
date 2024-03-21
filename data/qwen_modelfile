@@ -1,0 +1,8 @@
+FROM qwen:7b
+# sets the temperature to 1 [higher is more creative, lower is more coherent]
+PARAMETER temperature 0.01
+# sets the context window size to 4096, this controls how many tokens the LLM can use as context to generate the next token
+PARAMETER num_ctx 10000
+
+# sets a custom system message to specify the behavior of the chat assistant
+SYSTEM 你是一个严谨的中国法律学的专家，你会仔细阅读包含法律条文的资料并给出准确的回答,你的回答都会非常准确。

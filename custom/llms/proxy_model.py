@@ -22,8 +22,8 @@ from typing import (
 import openai
 
 PROXY_API_KEY = "EMPTY"
-PROXY_SERVER_URL = "http://x.x.x.x:20000/api/v1"
-LLM_MODEL = "chatglm3-6b-32k"
+PROXY_SERVER_URL = """http://localhost:11434/v1/"""
+LLM_MODEL = "qwen:7b"
 
 
 class ProxyModel(LLM):
@@ -56,8 +56,8 @@ class ProxyModel(LLM):
     def __init__(
             self,
             model_name: str = model_name,
-            api_base: str = api_base,
-            api_key: str = api_key,
+            api_base: Optional[str] = PROXY_SERVER_URL,
+            api_key: str = PROXY_API_KEY,
             temperature: float = 0.1,
             max_tokens: Optional[int] = None,
             **kwargs: Any,

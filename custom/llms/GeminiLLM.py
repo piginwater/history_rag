@@ -73,7 +73,7 @@ class Gemini(LLM):
     def call_with_prompt(self, prompt):
         # export GOOGLE_API_KEY="YOUR_KEY"
         # export GOOGLE_API_BASE="generativelanguage.googleapis.com"
-        genai.configure(api_key=os.getenv("GOOGLE_API_KEY"),
+        genai.configure(api_key='AIzaSyBIn-4M2ukTKm8vc6INIlNPYn7f7GqRyyk',
                         client_options={
                             "api_endpoint": self.api_base
                         },
